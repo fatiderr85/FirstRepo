@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      
+<meta charset="utf-8"/>
+<title>Countries - Spring Boot Web Application Example</title>
+</head>
+<body>
+    <h1 align = "center"> Countries</h1>
+    <div align= "center"> 
+    <a  th:href="@{/addCountry}"> add</a>
+    </div>
+    <br/>
+    
+    <table border="1" cellpadding="10" align="center">
+<tr> <td> ID</td> <td> Countries</td> 
+<tr th:each="country : ${names}">
+
+<td th:text ="${country.country_Id}"> ID</td>
+<td><a th:text ="${country.country_Name}" th:href="@{/countryInfo/{country_Name}(country_Name=${country.country_Name})}" > Countries</a></td>
+</tr>
+</table>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+</head>
+<body>
+   <h1 align = "center"> Country</h1>
+    <br/>
+    <table border="1" cellpadding="10" align="center">
+    
+<tr> <td> ID</td> <td> Countries</td> <td> Capital</td> <td> Population </td>
+</tr>
+<tr><td th:text ="${country.country_Id}"> ID</td>
+<td th:text ="${country.country_Name}"> Country</td>
+<td th:text ="${country.capital}"> Capital</td>
+<td th:text ="${country.population}"> Population</td>
+</tr>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<td> <a th:href="@{/delete/{country_Id}(country_Id=${country.country_Id})}"> Delete</a></td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<td> <a th:href="@{/edit/{country_Id}(country_Id=${country.country_Id})}"> Edit</a></td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<h3> Countries</h3>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${countries}" method="post">
+ID:
+<input type="text" th:field="*{country_Id}" readonly="readonly"/><br>
+Countries:
+<input type="text" th:field="*{country_Name}" readonly="readonly"/><br>
+Capital:
+<input type="text" th:field="*{capital}" readonly="readonly"/><br>
+Population:
+<input type="text" th:field="*{population}"/><br>
+
+<button type="submit">update</button>
+</form>
+</body>
+</html>
